@@ -1,10 +1,10 @@
 let express = require("express");
 let { track } = require("./models/track.model");
 let { sequelize } = require("./lib/index");
-const { parse } = require("querystring");
-const { appendFileSync } = require("fs");
 let app = express();
+let cors = require('cors');
 app.use(express.json());
+app.use(cors());
 
 let movieData = [
   {
